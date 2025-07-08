@@ -104,7 +104,11 @@ gcloud compute instances attach-disk NEW_VM_NAME \
 
 # Note
 
-Do change the values of the configuration variables to align with your project and instance details before running the script.
+1. Do change the values of the configuration variables to align with your project and instance details before running the script.
+
+2. You may need to change a few organization policies and constrainst to migrate the images and create VMs in destination projects.
+    + Remove enforcement of the organization policy for creating shielded VMs only
+    + Add the source project to the list of allowed projects that can be trusted for machine images 
 
 
 
